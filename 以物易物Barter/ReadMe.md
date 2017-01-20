@@ -1,4 +1,5 @@
 # Barter
+<img src="http://i.imgur.com/a41z9zz.png"><br>
 <h1><img class="alignnone  wp-image-99" src="https://catmaoblog.files.wordpress.com/2016/10/6lqz4de.png" alt="Icon made by Freepik from www.flaticon.com" width="40" height="40" /> <a href="https://catmaoblog.wordpress.com/2017/01/20/barter/" target="_blank">點我前往 WordPress</a></h1>
 <h1><img class="alignnone  wp-image-41" src="https://catmaoblog.files.wordpress.com/2016/10/3h9rzur.png" alt="Icon made by Popcorns Arts from www.flaticon.com" width="40" height="40" /> 程式題目</h1>
 有一遊戲，有不同價值珠寶，價值由小排到大，各放在相鄰的箱子重，如要以物易物，食物價值 n ，如果只能拿連在一起的箱子，假設只有一種答案，請問要拿第幾個箱子到第幾個箱子？<br><br>
