@@ -7,8 +7,8 @@ Consider the following algorithm:<br>
 <li>1. input n</li>
 <li>2. print n</li>
 <li>3. if n = 1 then STOP</li>
-<li>4. ----if n is odd then n ←− 3n + 1</li>
-<li>5. ----else n ←− n/2</li>
+<li>4. ----if n is odd then n ← 3n + 1</li>
+<li>5. ----else n ← n/2</li>
 <li>6. GOTO 2</li>
 </ul>
 Given the input 22, the following sequence of numbers will be printed<br><br>
