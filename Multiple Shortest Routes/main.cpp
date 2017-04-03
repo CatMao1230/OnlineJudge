@@ -116,7 +116,7 @@ int main() {
 		for (int i = 0; i < n; i++)
 			delete[] edge[i];
 		delete [] edge;
-		delete front;
+		delete [] front;
 
 	}
 
