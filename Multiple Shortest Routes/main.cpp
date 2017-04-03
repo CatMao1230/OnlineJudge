@@ -1,6 +1,6 @@
 /*
 
-³Ìµu¸ô®|·j´M
+æœ€çŸ­è·¯å¾‘æœå°‹
 https://catmaoblog.wordpress.com/2017/04/02/multiple-shortest-routes/
 ---------------------------------------------------------------------
 By. CatMao
@@ -12,52 +12,52 @@ using namespace std;
 
 int main() {
 
-	int C; // ´Xµ§´ú¸ê
+	int C; // å¹¾ç­†æ¸¬è³‡
 	cin >> C;
 	for (int count = 0; count < C; count++) {
 
-		bool More = false; // ¬O§_¦³²Ä¤G±ø¸ô®|
-		int Route = Infinity; // ³Ìµu¸ô®|
+		bool More = false; // æ˜¯å¦æœ‰ç¬¬äºŒæ¢è·¯å¾‘
+		int Route = Infinity; // æœ€çŸ­è·¯å¾‘
 
-		int n; // «Ø¿vª« node
-		int des; // ¥Øªº¦a
-		int m; // Ãä¼Æ
+		int n; // å»ºç¯‰ç‰© node
+		int des; // ç›®çš„åœ°
+		int m; // é‚Šæ•¸
 		cin >> n >> des >> m;
 
-		// °ÊºA¯x°}
-		int ** edge; // Ãä
+		// å‹•æ…‹çŸ©é™£
+		int ** edge; // é‚Š
 		edge = new int *[n];
 		for (int i = 0; i < n; i++)
 		{
 			edge[i] = new int[n];
 		}
 
-		for (int i = 0; i < n; i++) { // ªì©l­È
+		for (int i = 0; i < n; i++) { // åˆå§‹å€¼
 			for (int j = 0; j < n; j++) {
 				edge[i][j] = -1;
 			}
 			edge[i][i] = Infinity;
 		}
-		edge[0][0] = 0; // °_ÂIªº³Ìµu¸ô®|¬° 0
+		edge[0][0] = 0; // èµ·é»çš„æœ€çŸ­è·¯å¾‘ç‚º 0
 
-		int * front; // «e­±ªºÂI
+		int * front; // å‰é¢çš„é»
 		front = new int[n];
 		for (int i = 0; i < n; i++) {
-			front[n] = -1; // °²©w¨S¦³«e¤@­ÓÂI
+			front[i] = -1; // å‡å®šæ²’æœ‰å‰ä¸€å€‹é»
 		}
 
-		// ©w¸q m ­ÓÃä
+		// å®šç¾© m å€‹é‚Š
 		for (int i = 0; i < m; i++) {
 			int node1, node2, num;
 			cin >> node1 >> node2 >> num;
 			edge[node1][node2] = num;
 		}
 
-		// ³Ìµu¸ô®|ºtºâªk
+		// æœ€çŸ­è·¯å¾‘æ¼”ç®—æ³•
 		for (int i = 0; i < n - 1; i++) {
 			for (int u = 0; u < n; u++) {
 				for (int v = 0; v < n; v++) {
-					if (u != v && edge[u][v] != -1) { // ¦³Ãä
+					if (u != v && edge[u][v] != -1) { // æœ‰é‚Š
 						if (edge[v][v] > edge[u][u] + edge[u][v]) {
 							edge[v][v] = edge[u][u] + edge[u][v];
 							front[v] = u;
@@ -68,17 +68,17 @@ int main() {
 		}
 		Route = edge[des][des];
 
-		// ¬d¬İ¬O§_¦³¨âºØ¥H¤W³Ìµu¸ô®|
-		int now = des; // ±q²×ÂI©¹«e§ä¸ô®|
-		int FrontCount = 0; // ±q²×ÂI¨ì°_ÂIªº³ÌµuÃä¼Æ
-		int DifCount = 0; // ©â±¼Ãä¼Æ³Ì¤p¸ô®|¤£¬Û¦P
+		// æŸ¥çœ‹æ˜¯å¦æœ‰å…©ç¨®ä»¥ä¸Šæœ€çŸ­è·¯å¾‘
+		int now = des; // å¾çµ‚é»å¾€å‰æ‰¾è·¯å¾‘
+		int FrontCount = 0; // å¾çµ‚é»åˆ°èµ·é»çš„æœ€çŸ­é‚Šæ•¸
+		int DifCount = 0; // æŠ½æ‰é‚Šæ•¸æœ€å°è·¯å¾‘ä¸ç›¸åŒ
 		while (0 <= front[now] && front[now] < n) {
 			int temp = edge[front[now]][now];
-			edge[front[now]][now] = -1; // ®³±¼¨ä¤¤¤@­ÓÃä
+			edge[front[now]][now] = -1; // æ‹¿æ‰å…¶ä¸­ä¸€å€‹é‚Š
 
-										// ³Ìµu¸ô®|ºtºâªk
+										// æœ€çŸ­è·¯å¾‘æ¼”ç®—æ³•
 
-			for (int i = 0; i < n; i++) { // ªì©l­È
+			for (int i = 0; i < n; i++) { // åˆå§‹å€¼
 				edge[i][i] = Infinity;
 			}
 			edge[0][0] = 0;
@@ -86,7 +86,7 @@ int main() {
 			for (int i = 0; i < n - 1; i++) {
 				for (int u = 0; u < n; u++) {
 					for (int v = 0; v < n; v++) {
-						if (u != v && edge[u][v] != -1) { // ¦³Ãä
+						if (u != v && edge[u][v] != -1) { // æœ‰é‚Š
 							if (edge[v][v] > edge[u][u] + edge[u][v]) {
 								edge[v][v] = edge[u][u] + edge[u][v];
 							}
@@ -94,7 +94,7 @@ int main() {
 					}
 				}
 			}
-			if (edge[des][des] != Route) { // ©â±¼«á³Ì¤p¸ô®|ÅÜ¤j ¥Nªí¦¹Ãä¥²¶·¦s¦b
+			if (edge[des][des] != Route) { // æŠ½æ‰å¾Œæœ€å°è·¯å¾‘è®Šå¤§ ä»£è¡¨æ­¤é‚Šå¿…é ˆå­˜åœ¨
 				DifCount++;
 			}
 			edge[front[now]][now] = temp;
@@ -112,7 +112,7 @@ int main() {
 		if (Route == Infinity) cout << "x" << endl;
 		else cout << Route << endl;
 
-		// ÄÀ©ñ°ÊºA°}¦C
+		// é‡‹æ”¾å‹•æ…‹é™£åˆ—
 		for (int i = 0; i < n; i++)
 			delete[] edge[i];
 		delete [] edge;
@@ -120,5 +120,6 @@ int main() {
 
 	}
 
+	system("pause");
 	return 0;
 }
