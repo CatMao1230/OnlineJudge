@@ -1,6 +1,7 @@
 <img src="http://i.imgur.com/a41z9zz.png">
 <h1><img class="alignnone  wp-image-99" src="https://catmaoblog.files.wordpress.com/2016/10/6lqz4de.png" alt="Icon made by Freepik from www.flaticon.com" width="40" height="40" /> <a href="https://catmaoblog.wordpress.com/2017/04/02/multiple-shortest-routes/" target="_blank">點我前往 WordPress
 </a></h1>
+<h1><img class="alignnone  wp-image-99" src="https://catmaoblog.files.wordpress.com/2016/10/6lqz4de.png" alt="Icon made by Freepik from www.flaticon.com" width="40" height="40" /> <a href="https://repl.it/GjnH/12" target="_blank">點我前往 repl.it</a></h1>
 給定一張有向圖，求 0 至目的地的最短路徑為多少，並且判定最短路徑是否只有一條。
 輸入：
 <ul>
